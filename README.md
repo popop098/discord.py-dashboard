@@ -7,6 +7,13 @@ for discord.py dashboard
 업데이트내역은 [블로그](#)를 통해 확인하세요.
 
 # ENG
-This Repositories is for discord.py Web dashboard.
+This Repositories is Web dashboard for discord.py.
 The frontend and backend are included, but some security sensitive elements are not shared.
 Please check my [blog](#) for updates.
+
+# 참고 및 핵심 모듈
+https://github.com/DevStrikerTech/Discord-Dashboard
+
+https://github.com/jnawk/Quart-Discord
+
+https://github.com/Ext-Creators/discord-ext-ipc
