@@ -25,12 +25,6 @@ class MyBot(commands.Bot):
 
 my_bot = MyBot(command_prefix="!")
 
-@my_bot.command()
-async def guild(ctx):
-    li = []
-    for i in my_bot.guilds:
-        li.append(i.id)
-    await ctx.send(li)
 if __name__ == "__main__":
     my_bot.ipc.start()  # start the IPC Server
-    my_bot.run("NzY2OTMyMzY1NDI2ODE5MDky.X4qjbA.Gwh8VEtkI3igoUsgTJ3HHWjrNhE")
+    my_bot.run("token")

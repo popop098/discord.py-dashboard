@@ -15,9 +15,9 @@ ipc_client = ipc.Client(
 app.secret_key = "aswedfghjuygfvcdxs"
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "true"    # !! Only in development environment.
 
-app.config["DISCORD_CLIENT_ID"] = 766932365426819092
-app.config["DISCORD_CLIENT_SECRET"] = 'WcpXsmcXxc1-qNkYynZSIygUQqHjvCbo'
-app.config["DISCORD_BOT_TOKEN"] = 'NzY2OTMyMzY1NDI2ODE5MDky.X4qjbA.Gwh8VEtkI3igoUsgTJ3HHWjrNhE'
+app.config["DISCORD_CLIENT_ID"] = id
+app.config["DISCORD_CLIENT_SECRET"] = 'secret'
+app.config["DISCORD_BOT_TOKEN"] = 'token'
 app.config["DISCORD_REDIRECT_URI"] = "http://127.0.0.1:5000/redirect"
 
 discord = DiscordOAuth2Session(app)
