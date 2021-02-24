@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-default col-md-offset-3">
+                        <div class="panel-heading main-color-bg">
+                            <h3 class="panel-title">서버를 선택하세요.</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="well well-lg" style="overflow:auto; width:600px; height:550px;">
+                                {% for guild in render_guild %}
+                                    {% for i in CHECK %}
+                                        {% if i == guild.id %}
+                                            {% if guild['permissions']['administrator'] == True %}
+                                            <h4 style="position:relative; margin-top:0.1em; margin-bottom:0.2em" class="well well-lg">
+                                                <button type="button" style="position:relative" onclick="location.href='http://127.0.0.1:5000/dashboard/{{ guild.id }}' " class="btn btn-success pull-right">대시보드</button>
+                                                <img class="img-responsive" style="display:inline-block; height:30px; margin-top-5px" src="{{ guild.icon_url or 'https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-512.png' }}">
+                                                👑 {{ guild['name'] }}
+                                            </h4>
+                                            {% else %}
+                                            <h4 style="margin-top:0.5em; margin-bottom:0.5em" class="well well-lg">
+                                                <button type="button" style="position:relative" onclick="location.href='http://127.0.0.1:5000/dashboard/{{ guild.id }}' " class="btn btn-success pull-right">대시보드</button>
+                                                <img class="img-responsive" style="display:inline-block; height:30px; margin-top-5px" src="{{ guild.icon_url or 'https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-512.png' }}" />
+                                                {{ guild['name'] }}
+                                            </h4>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

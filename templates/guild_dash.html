@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-default col-md-offset-3">
+                        <div class="panel-heading main-color-bg">
+                            <h3 class="panel-title">{{ GNAME }}</h3>
+                        </div>
+                        <div class="panel-body" >
+                            <div class="well well-lg">
+                                {% if iCON == True %}
+                                <div class="row">
+                                    <div style="text-align: center" class="well well-lg">
+                                        <h1>
+                                            <img class="img-responsive" style="display:inline-block; height:30px; margin-top-5px" src="{{ ICON }}" />
+                                            {{ GNAME }}
+                                        </h1>
+                                    </div>
+                                </div>
+                                {% elif ICON == False %}
+                                <div class="row">
+                                    <div class="well well-lg">
+                                        <h1>
+                                            <img class="img-responsive" style="display:inline-block; height:30px; margin-top-5px" src="{{ url_for('static', filename='discord-512.png') }}" />
+                                            {{ GNAME }}
+                                        </h1>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                <div class="row" >
+                                    <div class="well well-lg">
+                                        <h1><strong>레벨링설정</strong>
+                                            <label class="switch">
+                                              <input type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                        </h1>
+                                    </div>
+                                    <div class="well well-lg">
+                                        <h1><strong>자동경고</strong>
+                                            <label class="switch">
+                                              <input type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                        </h1>
+                                    </div>
+                                    <div class="well well-lg">
+                                        <h1><strong>레벨링설정</strong>
+                                            <label class="switch">
+                                              <input type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                        </h1>
+                                    </div>
+                                    <div class="well well-lg">
+                                        <h1><strong>레벨링설정</strong>
+                                            <label class="switch">
+                                              <input type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                        </h1>
+                                    </div>
+                                    <div class="well well-lg">
+                                        <h1><strong>레벨링설정</strong>
+                                            <label class="switch">
+                                              <input type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

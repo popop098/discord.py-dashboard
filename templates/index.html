@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3">
+                    <div class="col-md-7 col-md-offset-2 animated fadeIn">
+                        <img src="{{ url_for('static', filename='taesia.png') }}" class="discord-logo2">
+                        <h1 style="color:#FFFFFF;"><strong>태시아봇</strong>에게</h1>
+                        <h1 style="color:#FFFFFF;">커맨드: <span class="startTyper"></span></h1>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-right"
+                 data-aos-offset="300"
+                 data-aos-easing="ease-in-sine">
+                <div class="row" style="margin-top:16em">
+                    <h1 style="color:#FFFFFF;"><strong>태시아봇</strong>은</h1>
+                    <h1 style="color:#FFFFFF;"><span class="startTyper2"></span></h1>
+                </div>
+            </div>
+            <div class="container" style="margin-top:20em; margin-bottom:10em">
+                <div class="col-md-9 col-md-offset-3">
+                    <div data-aos="fade-left"
+                         class="col-md-7 col-md-offset-2" style="text-align:right">
+                        <h1 style="color:#FFFFFF;"><strong>태시아봇</strong>은</h1>
+                        <h1 style="color:#FFFFFF;">자동자가진단,서버관리,프리미엄,뮤직,웹검색등등</h1>
+                        <h1 style="color:#FFFFFF;">다양한 기능을 가진 만능봇입니다.</h1>
+                        <h1 style="color:#FFFFFF;"><span class="Count">0</span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="margin-top:20em; margin-bottom:30em">
+                <div class="row">
+                    <div>
+                        <div class="col-md-5 col-md-offset-2 animated fadeIn" style="position:absolute">
+                            <div style="position:relative; width: 600px; height: 600px; text-align:center">
+                                <h1 style="color:#FFFFFF; font-size:50px"><strong>현재 태시아봇 서버 접속수</strong></h1>
+                                <h1 style="color:#FFFFFF; font-size:50px"><span class="Count">0</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

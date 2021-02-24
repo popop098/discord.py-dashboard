@@ -1,0 +1,51 @@
+{% if LOG == True %}
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">{{ NAME }} 자금: 0원 프리미엄: 미구독</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><button style="margin-top:0.5em; margin-bottom:0.5em; width:5em" type="button" onclick="location.href='http://127.0.0.1:5000/logout' " class="btn btn-danger pull-right">Logout</button></li>
+    </ul>
+  </div>
+</nav>
+{% else %}
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">태시아 웹 대시보드</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><button style="margin-top:0.4em" type="button" onclick="location.href='http://127.0.0.1:5000/login' " class="btn btn-primary pull-right">Login</button></li>
+    </ul>
+  </div>
+</nav>
+{% endif %}

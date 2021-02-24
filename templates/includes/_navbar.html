@@ -1,0 +1,32 @@
+{% if LOG == True %}
+<nav class="navbar navbar-inverse navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header" style="color:#FFFFFF;">
+      <h3>{{ NAME }} 자금: 0원 프리미엄: 미구독</h3>
+    </div>
+    <ul class="nav navbar-nav ml-auto navbar-right position-relative">
+      <li><div class="container"><button style="margin-top:0.3em; margin-bottom:0.5em; width:7em" type="button" onclick="location.href='http://127.0.0.1:5000/logout' " class="btn btn-danger pull-right">Logout</button></div></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="deactive"><a href="http://127.0.0.1:5000/home">Home</a></li>
+      <li><a href="http://127.0.0.1:5000/dashboard">길드 대시보드</a></li>
+      <li><a href="http://127.0.0.1:5000/me">내정보</a></li>
+    </ul>
+
+  </div>
+</nav>
+{% else %}
+<nav class="navbar navbar-inverse navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">태시아 웹 대시보드</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="http://127.0.0.1:5000/home">Home</a></li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto navbar-right position-relative">
+      <li><div class="container"><button style="margin-top:0.4em; margin-bottom:0.5em; width:7em" type="button" onclick="location.href='http://127.0.0.1:5000/login' " class="btn btn-primary pull-right">Login</button></div></li>
+    </ul>
+  </div>
+</nav>
+{% endif %}

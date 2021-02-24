@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta data -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Discord Dashboard</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='morphext.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='animate.css') }}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="../static/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+    div.fixed {
+      position: absolute;
+      left: 880px;
+      border: 3px solid #73AD21;
+    }
+    </style>
+    </head>
+
+    <body>
+        {% include 'includes/_navbar.html' %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+        <div id="footer" style="text-align:center; color:#FFFFFF; font-size:1.3em">
+            · (C) 2021. 꼬리가게연구소 All rights reserved.
+        </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+     duration: 1200
+    });
+    </script>
+    </body>
+
+    <!-- Bootstrap JS -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='compressed.js') }}"></script>
+    <script src="{{ url_for('static', filename='morphext.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='detectmobilebrowser.js') }}"></script>
+    <script>
+    $("#rotating").Morphext({
+        animation: "slideInDown",
+        separator: ",",
+        speed: 2000,
+        complete: function () {
+
+        }
+    });
+    </script>
+    <script>
+    $(function() {
+    $(".startTyper").typed({
+        strings: ['"ㅌ프리미엄"','"ㅌ상점"','"ㅌ출석체크"','"ㅌ내정보"'],
+        typeSpeed: 150, // typing speed
+        backDelay: 100, // pause before backspacing
+        loop: true, // loop on or off (true or false)
+        loopCount: false, // number of loops, false = infinite
+        });
+    $(".startTyper2").typed({
+        strings: ['다양한 기능을 가진','최고의 봇입니다.'],
+        typeSpeed: 150, // typing speed
+        backDelay: 100, // pause before backspacing
+        loop: true, // loop on or off (true or false)
+        loopCount: false, // number of loops, false = infinite
+        });
+    });
+    $('.Count').each(function() {
+      $(this).prop('Counter', 250)
+        .animate({
+          Counter: $(this).text()
+        }, {
+          duration: 4300,
+          easing: 'swing',
+          step: function(now, a) {
+            $(this).text(250 - ~~this.Counter);
+          }
+        });
+    });
+    </script>
+    <script>
+    console.log(jQuery.browser.mobile);
+    if(jQuery.browser.mobile == true)
+        alert('모바일 접속이 확인되었습니다. 쾌적한 사용을 위해 PC로 접속해주세요.');
+    </script>
+</html>
