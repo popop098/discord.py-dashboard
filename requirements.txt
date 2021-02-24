@@ -1,5 +1,5 @@
 quart
-quuart_discord
+Quart-Discord
 discord-ext-ipc
 discord
 discord.py
